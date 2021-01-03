@@ -1,0 +1,11 @@
+.vs
+MyPay.Common/bin
+MyPay.Common/obj
+MyPay.Data/bin
+MyPay.Data/obj
+MyPay.Repository/bin
+MyPay.Repository/obj
+MyPay.Services/bin
+MyPay.Services/obj
+MyPay.UI/bin
+MyPay.UI/obj
