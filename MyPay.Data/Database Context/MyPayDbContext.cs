@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MyPay.Data.Models;
 
 namespace MyPay.Data.Database_Context
 {
@@ -9,5 +10,8 @@ namespace MyPay.Data.Database_Context
             optionsBuilder.UseSqlServer(
                 @"Data Source=.;Initial Catalog=MyPayDB;Integrated Security=True;MultipleActiveResultSets=True;");
         }
+        public DbSet<Photo> Photos { get; set; }
+        public DbSet<BankCard> BankCards { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
