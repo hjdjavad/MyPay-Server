@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MyPay.Data.Infrastructure
 {
-    public class Repository<TEntity> : IRepository<TEntity>, IDisposable where TEntity : class
+    public abstract class Repository<TEntity> : IRepository<TEntity>, IDisposable where TEntity : class
     {
         #region Ctor
         private readonly DbContext _db;
