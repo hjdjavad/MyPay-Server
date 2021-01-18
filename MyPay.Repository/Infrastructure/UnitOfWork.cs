@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MyPay.Data.Repositories.Inter;
-using MyPay.Data.Repositories.Repo;
+using MyPay.Repository.Repositories.Inter;
+using MyPay.Repository.Repositories.Repo;
 
-namespace MyPay.Data.Infrastructure
+namespace MyPay.Repository.Infrastructure
 {
     public class UnitOfWork<TContext> : IUnitOfWork<TContext> where TContext:DbContext, new()
     {

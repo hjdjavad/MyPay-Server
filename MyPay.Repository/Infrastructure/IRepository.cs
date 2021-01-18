@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace MyPay.Data.Infrastructure
+namespace MyPay.Repository.Infrastructure
 {
     public interface IRepository<TEntity> where TEntity : class
     {
         //----------------------------------------------------------------------------------
         /*سه عمل اصلی*/
         //----------------------------------------------------------------------------------
+
         //اضافه کردن
         void Insert(TEntity entity);
         //ویرایش
@@ -20,9 +21,11 @@ namespace MyPay.Data.Infrastructure
         void Delete(TEntity entity);
         //حذف بر اساس شرط
         void Delete(Expression<Func<TEntity, bool>> wExpression);
+
         //----------------------------------------------------------------------------------
         /*درخواست ها*/
         //----------------------------------------------------------------------------------
+
         //در خواست بر اساس کلید اصلی
         TEntity GetById(object id);
         //درخواست برای دریافت همه
@@ -31,9 +34,11 @@ namespace MyPay.Data.Infrastructure
         TEntity Get(Expression<Func<TEntity, bool>> wExpression);
         //درخواست برای دریافت شرطی
         IEnumerable<TEntity> GetMany(Expression<Func<TEntity, bool>> wExpression);
+
         //----------------------------------------------------------------------------------
         /*ASYNC ها*/
         //----------------------------------------------------------------------------------
+
         //اضافه کردن
         Task InsertAsync(TEntity entity);
         //در خواست بر اساس کلید اصلی

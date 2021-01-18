@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MyPay.Data.Repositories.Inter;
-using MyPay.Data.Repositories.Repo;
+using MyPay.Repository.Repositories.Inter;
 
-namespace MyPay.Data.Infrastructure
+namespace MyPay.Repository.Infrastructure
 {
     public interface IUnitOfWork<TContext> : IDisposable where TContext : DbContext
     {

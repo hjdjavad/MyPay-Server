@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyPay.Data.Database_Context;
-using MyPay.Data.Infrastructure;
 using MyPay.Data.Models;
-using MyPay.Data.Repositories.Inter;
+using MyPay.Repository.Infrastructure;
+using MyPay.Repository.Repositories.Inter;
 
-namespace MyPay.Data.Repositories.Repo
+namespace MyPay.Repository.Repositories.Repo
 {
     public class UserRepository : Repository<User>, IUserRepository
     {

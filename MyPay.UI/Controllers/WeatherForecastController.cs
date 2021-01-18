@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyPay.Data.Database_Context;
-using MyPay.Data.Infrastructure;
+using MyPay.Repository.Infrastructure;
 
 namespace MyPay.UI.Controllers
 {

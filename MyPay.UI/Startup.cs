@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyPay.Data.Database_Context;
-using MyPay.Data.Infrastructure;
+using MyPay.Repository.Infrastructure;
 
 namespace MyPay.UI
 {
