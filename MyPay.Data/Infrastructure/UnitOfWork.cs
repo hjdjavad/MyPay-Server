@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using MyPay.Data.Repositories.Inter;
 using MyPay.Data.Repositories.Repo;
 
 namespace MyPay.Data.Infrastructure
@@ -17,8 +18,8 @@ namespace MyPay.Data.Infrastructure
 
 
         #region PrivateRepository
-        private UserRepository _userRepository;
-        public UserRepository UserRepository
+        private IUserRepository _userRepository;
+        public IUserRepository UserRepository
         {
             get
             {

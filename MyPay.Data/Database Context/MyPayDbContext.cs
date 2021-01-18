@@ -3,7 +3,7 @@ using MyPay.Data.Models;
 
 namespace MyPay.Data.Database_Context
 {
-    class MyPayDbContext : DbContext
+    public class MyPayDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

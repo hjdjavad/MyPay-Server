@@ -3,7 +3,7 @@ using MyPay.Data.Models;
 
 namespace MyPay.Data.Repositories.Inter
 {
-    interface IUserRepository : IRepository<User>
+    public interface IUserRepository : IRepository<User>
     {
     }
 }
