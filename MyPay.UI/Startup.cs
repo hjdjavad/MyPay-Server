@@ -5,8 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyPay.Data.Database_Context;
 using MyPay.Repository.Infrastructure;
-using MyPay.Services.Auth.Inter;
-using MyPay.Services.Auth.Service;
+using MyPay.Services.Site.Admin.Auth.Inter;
+using MyPay.Services.Site.Admin.Auth.Service;
 
 namespace MyPay.UI
 {

@@ -3,10 +3,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 	<ItemGroup>
-	  <ProjectReference Include="../MyPay.Services/MyPay.Services.csproj"/>
+	  <ProjectReference Include="../MyPay.Services/MyPay.Services.csproj" />
 	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Controllers\Api\" />
+	  <Folder Include="Controllers\Site\Admin\" />
+	</ItemGroup>
 </Project>

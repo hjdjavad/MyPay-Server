@@ -6,4 +6,8 @@
 	<ItemGroup>
 		<ProjectReference Include="../MyPay.Repository/MyPay.Repository.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Api\" />
+	  <Folder Include="Site\App\" />
+	</ItemGroup>
 </Project>

@@ -14,4 +14,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTO\Api\" />
+    <Folder Include="DTO\Site\Admin\" />
+    <Folder Include="DTO\Site\App\" />
+  </ItemGroup>
+
 </Project>

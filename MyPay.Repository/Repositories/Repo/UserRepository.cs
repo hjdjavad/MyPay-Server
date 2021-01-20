@@ -1,7 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MyPay.Common.Helpers;
 using MyPay.Data.Database_Context;
 using MyPay.Data.Models;
 using MyPay.Repository.Infrastructure;

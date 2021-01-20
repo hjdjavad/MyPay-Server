@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MyPay.Data.Models;
 
-namespace MyPay.Services.Auth.Inter
+namespace MyPay.Services.Site.Admin.Auth.Inter
 {
     public interface IAuthService
     {

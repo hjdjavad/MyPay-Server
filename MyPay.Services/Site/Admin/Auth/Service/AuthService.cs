@@ -3,9 +3,9 @@ using MyPay.Common.Helpers;
 using MyPay.Data.Database_Context;
 using MyPay.Data.Models;
 using MyPay.Repository.Infrastructure;
-using MyPay.Services.Auth.Inter;
+using MyPay.Services.Site.Admin.Auth.Inter;
 
-namespace MyPay.Services.Auth.Service
+namespace MyPay.Services.Site.Admin.Auth.Service
 {
     public class AuthService : IAuthService
     {
