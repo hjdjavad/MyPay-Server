@@ -4,6 +4,6 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 	<ItemGroup>
-		<ProjectReference Include="../MyPay.Repository/MyPay.Repository.csproj"/>
+		<ProjectReference Include="../MyPay.Repository/MyPay.Repository.csproj" />
 	</ItemGroup>
 </Project>

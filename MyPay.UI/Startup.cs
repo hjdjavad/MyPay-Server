@@ -5,6 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyPay.Data.Database_Context;
 using MyPay.Repository.Infrastructure;
+using MyPay.Services.Auth.Inter;
+using MyPay.Services.Auth.Service;
 
 namespace MyPay.UI
 {
@@ -23,6 +25,7 @@ namespace MyPay.UI
             services.AddControllers();
             services.AddCors();
             services.AddScoped<IUnitOfWork<MyPayDbContext>, UnitOfWork<MyPayDbContext>>();
+            services.AddScoped<IAuthService, AuthService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
