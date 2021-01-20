@@ -11,6 +11,6 @@
   </ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Controllers\Api\" />
-	  <Folder Include="Controllers\Site\Admin\" />
+	  <Folder Include="Controllers\Site\App\" />
 	</ItemGroup>
 </Project>

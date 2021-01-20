@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyPay.Data.Database_Context;
 
 namespace MyPay.Data.Migrations
 {
     [DbContext(typeof(MyPayDbContext))]
-    partial class MyPayDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210120134906_ChangeUs")]
+    partial class ChangeUs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

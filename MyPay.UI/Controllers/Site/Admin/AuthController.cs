@@ -1,6 +1,8 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MyPay.Data.Database_Context;
+using MyPay.Data.DTO.Site.Admin;
 using MyPay.Data.Models;
 using MyPay.Repository.Infrastructure;
 using MyPay.Services.Site.Admin.Auth.Inter;
@@ -20,26 +22,27 @@ namespace MyPay.UI.Controllers.Site.App
             _db = dbContext;
             _authService = authService;
         }
-        public async Task<IActionResult> Register(string userName,string password)
+        [HttpPost("register")]
+        public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
-            userName = userName.ToLower();
-            if (await _db.UserRepository.UserExist(userName))
+            userForRegisterDto.UserName = userForRegisterDto.UserName.ToLower();
+            if (await _db.UserRepository.UserExist(userForRegisterDto.UserName))
             {
                 return BadRequest("این نام کاربری وجود دارد");
             }
             var userToCreate = new User
             {
-                UserName = userName,
+                UserName = userForRegisterDto.UserName,
+                Name = userForRegisterDto.Name,
+                PhoneNumber = userForRegisterDto.PhoneNumber,
                 Address = "",
                 City = "",
-                DateOfBirth = "",
-                Gender = "",
+                DateOfBirth = DateTime.Now,
+                Gender = true,
                 IsActive = true,
-                Name = "",
-                PhoneNumber = "",
                 Status = true
             };
-            var userCreated = await _authService.Register(userToCreate, password);
+            var userCreated = await _authService.Register(userToCreate, userForRegisterDto.Password);
             return StatusCode(201);
         }
     }
