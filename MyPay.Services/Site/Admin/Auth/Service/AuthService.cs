@@ -17,8 +17,7 @@ namespace MyPay.Services.Site.Admin.Auth.Service
         }
         public async Task<User> Register(User user, string password)
         {
-            byte[] passwordHash, passwordSalt;
-            Utility.CreatePasswordHash(password, out passwordHash, out passwordSalt);
+            Utility.CreatePasswordHash(password, out var passwordHash, out var passwordSalt);
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
             await _db.UserRepository.InsertAsync(user);
@@ -34,7 +33,7 @@ namespace MyPay.Services.Site.Admin.Auth.Service
                 return null;
             }
 
-            if (Utility.VerifyPasswordHash(password,user.PasswordHash,user.PasswordSalt))
+            if (!Utility.VerifyPasswordHash(password,user.PasswordHash,user.PasswordSalt))
             {
                 return null;
             }
